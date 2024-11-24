@@ -5,6 +5,13 @@ from nltk.corpus import stopwords
 import string
 from nltk.stem.porter import PorterStemmer
 
+
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except LookupError:
+    st.write("Downloading 'punkt_tab' NLTK resource...")
+    nltk.download('punkt_tab')
+
 ps = PorterStemmer()
 nltk.download('stopwords')
 def transform_text(text):
