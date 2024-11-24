@@ -40,9 +40,9 @@ def transform_text(text):
 tfidf = pickle.load(open('vectorizer.pkl','rb'))
 model = pickle.load(open('model.pkl','rb'))
 
-st.title("Email Phishing Classifier")
+st.title("Email Phishing Detector")
 
-input_email = st.text_area("Enter the message")
+input_email = st.text_area("Enter the email")
 
 if st.button('Predict'):
 
